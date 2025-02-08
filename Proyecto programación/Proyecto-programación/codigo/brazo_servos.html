@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazo y Servos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        header {
+            background: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #ff6f61;
+            border-bottom: 2px solid #ff6f61;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>Brazo y Servos</header>
+    
+    <div class="container">
+        <h2>Descripción</h2>
+        <p>El brazo robótico está compuesto por tres servomotores que permiten su movimiento en diferentes direcciones. Estos motores están controlados por una Raspberry Pi Pico W, que recibe las señales necesarias para ajustar su posición según los datos de la cámara.
+
+<p>Cada servo tiene un rol específico dentro del sistema:
+
+<p><p>Base: Controla la rotación del brazo en el plano horizontal.
+<p><p>Articulación media: Permite el movimiento hacia arriba y hacia abajo.
+<p><p>Extremo del brazo: Ajusta la posición final del efector para alcanzar y manipular objetos.
+<p>Gracias a esta configuración, el brazo puede moverse con precisión para detectar, alcanzar y manipular objetos en su entorno.</p>
+    </div>
+      
+        <div class="container">
+        <h2>Diagrama</h2>
+        <div class="image-container">
+            <img src="imagenes/diagrama_brazo_servos.png" alt="Diagrama Brazo y Servos">
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Funcionamiento</h2>
+        <p>El brazo robótico opera de manera autónoma mediante la detección de objetos con una cámara y el control de sus movimientos a través de servomotores. Su funcionamiento se divide en varias etapas:</p>
+
+    <h2>1. Detección de Objetos</h2>
+    <ul>
+        <li>Una cámara captura imágenes en tiempo real y las procesa para identificar la presencia de un objeto.</li>
+        <li>Se utilizan algoritmos de detección que analizan las características del objeto y determinan su posición en el espacio.</li>
+        <li>Cuando un objeto es detectado dentro del área de trabajo, la información se envía al sistema de control del brazo.</li>
+    </ul>
+
+    <h2>2. Procesamiento de Datos y Cálculo de Movimiento</h2>
+    <ul>
+        <li>La Raspberry Pi Pico W recibe los datos de la cámara y calcula la trayectoria que debe seguir el brazo.</li>
+        <li>Se determinan los ángulos de cada servomotor para posicionar correctamente el efector del brazo.</li>
+        <li>Se aplica una interpolación mediante curvas de Bézier para generar movimientos suaves y precisos.</li>
+    </ul>
+
+    <h2>3. Movilización del Brazo</h2>
+    <ul>
+        <li>Los servomotores ajustan sus posiciones de acuerdo con los cálculos realizados.</li>
+        <li>El brazo se mueve gradualmente hasta alcanzar el objeto detectado.</li>
+        <li>Si se ha programado una acción de recolección, el brazo activa su mecanismo de agarre (si aplica).</li>
+    </ul>
+
+    <h2>4. Manipulación y Reubicación del Objeto</h2>
+    <ul>
+        <li>Una vez alcanzado el objeto, el brazo lo sujeta y procede a moverlo hasta una nueva posición.</li>
+        <li>Se sigue la trayectoria predefinida utilizando interpolación para evitar movimientos bruscos.</li>
+        <li>El objeto es colocado en su destino y el brazo regresa a su posición de espera.</li>
+    </ul>
+
+    <h2>5. Sincronización y Control Remoto</h2>
+    <ul>
+        <li>El sistema permite la sincronización con un gemelo virtual para visualizar los movimientos en un entorno digital.</li>
+        <li>También se puede operar el brazo manualmente mediante un control remoto si es necesario.</li>
+    </ul>
+
+    <p>Gracias a este proceso, el brazo robótico puede funcionar de manera autónoma o ser operado manualmente, permitiendo aplicaciones en automatización, manipulación de objetos y experimentación en robótica.</p>
+    </div>
+</body>
+</html>
