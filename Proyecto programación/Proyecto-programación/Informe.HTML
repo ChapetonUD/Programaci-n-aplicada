@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe del Proyecto - Brazo Robótico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #e3f2fd;
+        }
+        h1, h2 {
+            color: #1565c0;
+            text-align: center;
+            font-weight: 600;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        }
+        .diagram {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .block {
+            background: #1e88e5;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+            font-weight: 400;
+        }
+        .block a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        p, ul {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        a {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe del Proyecto - Brazo Robótico</h1>
+<p> Daniel Camilo Escobar Roa - 20222005035<p>
+<p> Santiago Chapeton Karabadjakof- 20222005057<p>
+    
+    <div class="section">
+        <h2>Introducción</h2>
+        <p>Este proyecto consiste en un brazo robótico que puede detectar objetos con una cámara y moverse automáticamente hacia ellos. Para lograrlo, usamos servomotores y un sistema de control por Wi-Fi, permitiendo que el brazo reaccione sin intervención manual.
+
+<p>En este documento, explicamos cómo funciona el brazo, qué materiales usamos y cómo se podría aplicar en el futuro. También incluimos un manual con enlaces al control remoto, el gemelo virtual y videos que muestran su funcionamiento. Además, desglosamos el código en sus diferentes partes, desde el control de los servos hasta la detección de objetos y los movimientos del brazo.
+
+<p>Por último, mencionamos algunas mejoras que se pueden hacer y dejamos un enlace al video de presentación del proyecto.</p>
+    </div>
+    
+     <div class="section">
+        <h2>Materiales Utilizados</h2>
+        <div class="gallery">
+           <div class="image-container">
+             <img src="imagenes/brazo.jpg" alt="Brazo Robótico">
+             <p class="image-text"><center>Brazo Robótico </p>
+        </div>
+           <div class="image-container">
+             <img src="imagenes/servos.jpg" alt="Servomotores">
+             <p class="image-text"><center>Servomotores</p>
+        </div>
+           <div class="image-container">
+           <img src="imagenes/iman.jpg" alt="Control Remoto">
+           <p class="image-text"><center>Electroiman</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Manual de Funcionamiento</h2>
+        <ul>
+            <li><a href="manual/control_remoto.html">Control Remoto</a></li>
+            <li><a href="manual/gemelo_virtual.html">Gemelo Virtual</a></li>
+            <li><a href="manual/videos.html">Videos de Funcionamiento</a></li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Diagrama de Bloques</h2>
+        <div class="diagram">
+            <div class="block"><a href="codigo/brazo_servos.html">Brazo y Servos</a></div>
+           
+            <div class="block"><a href="codigo/gemelo_virtual.html">Gemelo Virtual</a></div>
+            <div class="block"><a href="codigo/sincronizacion.html">Sincronización</a></div>
+            <div class="block"><a href="codigo/control_remoto.html">Control Remoto</a></div>
+            <div class="block"><a href="codigo/camara.html">Cámara y Detección de Objetos</a></div>
+            <div class="block"><a href="codigo/recoger_soltar.html">Recoger y Soltar un Objeto</a></div>
+            <div class="block"><a href="codigo/detectar_mover.html">Detectar Objeto y Mover el Brazo</a></div>
+           
+            
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Mejoras a Realizar</h2>
+     <p> El proyecto del brazo robótico ha funcionado correctamente, logrando ejecutar las tareas esperadas. Sin embargo, hay varios aspectos que pueden mejorarse tanto en el código como en la estética del diseño.<p>
+
+<p>En cuanto al software, aunque el código es funcional y efectivo, sería conveniente optimizar su estructura para que sea más claro y fácil de mantener. Además, no logramos implementar la pantalla OLED ni las curvas de Bézier, dos elementos que habrían mejorado la visualización de datos y la suavidad en los movimientos del brazo.<p>
+
+<p>Por otro lado, la estética del brazo también es un aspecto a mejorar. Aunque cumple su propósito, un diseño más refinado ayudaría a que el proyecto luzca más profesional y organizado.<p>
+
+<p>A pesar de estos puntos pendientes, el desarrollo del proyecto fue una gran oportunidad de aprendizaje, permitiéndonos mejorar nuestras habilidades en Python y en el control de servomotores a través de Wi-Fi. En futuras versiones, nos enfocaremos en pulir estos detalles para lograr un sistema más completo y eficiente.<p>
+    </div>
+    
+   <div class="section" style="text-align:center;">
+    <h2>Video de Presentación</h2>
+    <p><a href="https://youtu.be/-RjfnJpq92I"  style="color: #d32f2f; font-size: 18px; font-weight: bold;">Ver Video</a></p>
+</div>
+
+     <div class="section">
+        <h2>Código Fuente</h2>
+        <div class="code-links">
+            <a href="codigo/api.py" target="_blank">Api.py</a>
+            <a href="codigo/index.html" target="_blank">Ver index.html</a>
+            <a href="codigo/main_api_files.py" download>Main api</a>
+            <a href="codigo/vamos.py" download>Codigo principal</a>
+<a href="codigo/pruebaiman.py" download>Iman codigo</a>
+<a href="codigo/ov7670.py" download>Codigo camara</a>
+<a href="codigo/control.py" download>Codigo control servos</a>
+        </div>
+    </div>
+</body>
+</html>

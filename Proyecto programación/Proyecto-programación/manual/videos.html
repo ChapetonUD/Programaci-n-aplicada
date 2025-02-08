@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Videos</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eef2f3;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .video-card {
+            background: #fff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+        .video-card p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .video-card a {
+            text-decoration: none;
+            color: #ffffff;
+            background: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .video-card a:hover {
+            background: #0056b3;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎥 Galería de Videos</h1>
+    <div class="container">
+        <div class="video-card">
+            <p>📌 Video 1: Funcionamiento electroimán</p>
+            <a href="https://youtu.be/xGBcoscj1Aw" target="_blank">▶ Ver Video</a>
+        </div>
+        <div class="video-card">
+            <p>🤖 Video 2: Funcionamiento del Brazo Robótico</p>
+            <a href="https://youtu.be/5qB646PwJxc" target="_blank">▶ Ver Video</a>
+        </div>
+        <div class="video-card">
+            <p>💻 Video 3: Explicación camara</p>
+            <a href="https://youtu.be/G3_oa3DfO9s" target="_blank">▶ Ver Video</a>
+        </div>
+    </div>
+</body>
+</html>

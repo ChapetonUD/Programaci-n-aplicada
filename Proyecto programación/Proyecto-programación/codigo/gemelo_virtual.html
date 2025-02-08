@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemelo virtual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f9e27f, #f4c12d);
+            color: #333;
+        }
+        header {
+            background: #ffcc00;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>Gemelo virtual</header>
+    
+    <div class="container">
+        <h2>Descripción</h2>
+        <p>El gemelo virtual del brazo robótico ha sido desarrollado utilizando HTML y la biblioteca Three.js para la renderización de gráficos en 3D. Este modelo digital replica con precisión la estructura y los movimientos del brazo físico, permitiendo visualizar y controlar su funcionamiento en un entorno virtual.
+
+<p>En la interfaz del gemelo virtual, el usuario puede manipular el brazo mediante un control similar al del modelo real. Esto permite ajustar la posición de los servomotores y observar cómo responde el sistema en tiempo real. Además, gracias a la representación 3D, es posible analizar los movimientos desde distintos ángulos, facilitando la comprensión de su cinemática y comportamiento.
+
+<p>El gemelo virtual es una herramienta útil tanto para la simulación como para la validación de movimientos antes de ejecutarlos en el brazo físico. Esto ayuda a prevenir errores, optimizar trayectorias y realizar pruebas sin riesgo de dañar los componentes reales.
+    </div>
+    
+    <div class="container">
+        <h2>Diagrama</h2>
+        <div class="image-container">
+            <img src="imagenes/gemelo.png" alt="Diagrama Brazo y Servos">
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Funcionamiento</h2>
+        <p>El gemelo virtual del brazo robótico funciona como una simulación interactiva en 3D creada con <strong>HTML</strong> y <strong>Three.js</strong>. Su propósito es replicar en un entorno digital los movimientos y acciones del brazo real, permitiendo visualizar su comportamiento antes de ejecutarlo físicamente.</p>
+
+    <h2>1. Renderización del Modelo 3D</h2>
+    <ul>
+        <li>Se utiliza <strong>Three.js</strong> para generar una representación tridimensional del brazo robótico.</li>
+        <li>El modelo 3D incluye todas las articulaciones y componentes, permitiendo visualizar su estructura con precisión.</li>
+        <li>Se pueden cambiar ángulos de vista y hacer zoom para analizar los movimientos desde diferentes perspectivas.</li>
+    </ul>
+
+    <h2>2. Interacción y Control</h2>
+    <ul>
+        <li>El usuario puede mover el brazo virtual mediante un control que imita el del modelo real.</li>
+        <li>Los comandos ajustan los ángulos de los servomotores en tiempo real, actualizando la posición del brazo en la simulación.</li>
+        <li>También se pueden probar movimientos predefinidos o trayectorias generadas por interpolación.</li>
+    </ul>
+
+    <h2>3. Sincronización con el Brazo Real</h2>
+    <ul>
+        <li>El gemelo virtual no solo es una simulación, sino que también puede sincronizarse con el brazo físico.</li>
+        <li>Cuando se envían comandos al brazo real, estos mismos movimientos se reflejan en la simulación digital.</li>
+        <li>Esto permite verificar el comportamiento esperado antes de ejecutar acciones en el hardware.</li>
+    </ul>
+
+    <h2>4. Uso para Pruebas y Optimización</h2>
+    <ul>
+        <li>Permite experimentar con diferentes movimientos sin riesgo de dañar los componentes físicos.</li>
+        <li>Facilita el ajuste de parámetros como velocidad, ángulos y trayectorias para mejorar la precisión del brazo real.</li>
+        <li>Sirve como una herramienta de validación, reduciendo errores y optimizando la programación del sistema.</li>
+    </ul>
+
+    <p>Gracias a este funcionamiento, el gemelo virtual se convierte en un recurso clave para la simulación, prueba y optimización del brazo robótico, ofreciendo una forma segura y eficiente de interactuar con el sistema antes de su ejecución física.</p>
+
+    </div>
+</body>
+</html>

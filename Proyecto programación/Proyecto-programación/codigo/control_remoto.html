@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control remoto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #a8e063, #56ab2f);
+            color: #333;
+        }
+        header {
+            background: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #4caf50;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>Control remoto</header>
+    
+    <div class="container">
+        <h2>Descripción</h2>
+        p>El control remoto opera mediante un servidor web alojado en la Raspberry Pi Pico W. Una vez conectado a la red Wi-Fi, el usuario puede acceder a la interfaz de control ingresando la <strong>dirección IP</strong> del servidor en un navegador. Desde esta interfaz, se pueden ajustar los movimientos del brazo de forma intuitiva.</p>
+    <p>Cuando el usuario interactúa con los controles de la interfaz, los comandos se envían a la Raspberry, que los procesa y transmite las señales correspondientes a los servomotores.</p>
+
+    </div>
+    
+    <div class="container">
+        <h2>Diagrama</h2>
+        <div class="image-container">
+            <img src="imagenes/control.png" alt="Diagrama Brazo y Servos">
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Funcionamiento</h2>
+        
+    <h3>1. Establecimiento de la Conexión</h3>
+    <ul>
+        <li>El código en <strong>CircuitPython</strong> configura la <strong>Raspberry Pi Pico W</strong> como un servidor web.</li>
+        <li>Se conecta a la red Wi-Fi y genera una dirección IP accesible para el usuario.</li>
+    </ul>
+
+    <h3>2. Acceso a la Interfaz de Control</h3>
+    <ul>
+        <li>El usuario abre un navegador web e ingresa la dirección IP proporcionada por la Raspberry.</li>
+        <li>Se carga una página HTML con controles de movimiento, como botones o sliders.</li>
+    </ul>
+
+    <h3>3. Envío y Procesamiento de Comandos</h3>
+    <ul>
+        <li>Cuando el usuario interactúa con los controles, se envían peticiones HTTP a la Raspberry.</li>
+        <li>El código en CircuitPython recibe estas peticiones y traduce los comandos en señales PWM para los servomotores.</li>
+    </ul>
+
+    <h3>4. Movimiento del Brazo</h3>
+    <ul>
+        <li>Los servomotores ajustan su posición según las órdenes recibidas.</li>
+        <li>El brazo robótico replica los movimientos realizados en la interfaz web.</li>
+    </ul>
+
+    <p>Este sistema de control remoto permite una manipulación sencilla y eficiente del brazo robótico sin necesidad de conexiones físicas, facilitando su uso y ampliando sus aplicaciones.</p>
+    </div>
+</body>
+</html>

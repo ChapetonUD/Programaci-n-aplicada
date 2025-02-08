@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detectar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00bcd4, #00a5a0);
+            color: #333;
+        }
+        header {
+            background: #009688;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #009688;
+            border-bottom: 2px solid #009688;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>Detectar</header>
+    
+    <div class="container">
+        <h2>Descripción</h2>
+        <p>Cuando la cámara detecta un objeto, el brazo robótico se mueve hacia una <strong>posición fija</strong> donde se espera encontrarlo. Una vez allí, tras un pequeño retraso, un <strong>relé</strong> activa el flujo de corriente hacia el electroimán, permitiendo que el objeto sea sujetado. Luego, el brazo transporta el objeto a otra posición fija donde se encuentra la caja, desactiva el electroimán y deja caer el objeto.</p>
+    <p>Después de completar la tarea, el brazo regresa a su <strong>posición inicial</strong>, quedando en espera de la próxima detección de un objeto.</p>
+    
+    <div class="container">
+        <h2>Diagrama</h2>
+        <div class="image-container">
+            <img src="imagenes/relevo.png" alt="Diagrama Brazo y Servos">
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Funcionamiento</h2>
+         <h3>1. Detección del Objeto</h3>
+    <ul>
+        <li>La <strong>cámara OV7670</strong> escanea el área en busca de objetos.</li>
+        <li>Cuando se detecta un objeto, el sistema activa la secuencia de movimiento del brazo.</li>
+    </ul>
+
+    <h3>2. Movimiento Hacia la Posición del Objeto</h3>
+    <ul>
+        <li>El brazo robótico se mueve hacia la ubicación fija donde se encuentra el objeto.</li>
+        <li>Se espera un breve período de tiempo para asegurar la alineación correcta.</li>
+    </ul>
+
+    <h3>3. Activación del Electroimán</h3>
+    <ul>
+        <li>Un <strong>relé</strong> se activa, permitiendo que la corriente fluya hacia el electroimán.</li>
+        <li>El electroimán genera un campo magnético que atrae y sujeta el objeto.</li>
+    </ul>
+
+    <h3>4. Transporte del Objeto</h3>
+    <ul>
+        <li>El brazo robótico se mueve hacia la caja de destino.</li>
+        <li>El electroimán mantiene el objeto asegurado durante el traslado.</li>
+    </ul>
+
+    <h3>5. Liberación del Objeto</h3>
+    <ul>
+        <li>Al llegar a la caja, el sistema desactiva el flujo de corriente.</li>
+        <li>El electroimán pierde su magnetismo y el objeto cae dentro de la caja.</li>
+    </ul>
+
+    <h3>6. Retorno a la Posición Inicial</h3>
+    <ul>
+        <li>El brazo regresa a su posición inicial, listo para detectar un nuevo objeto.</li>
+    </ul>
+
+    <p>Este proceso automatizado permite la manipulación eficiente de objetos sin intervención humana, optimizando la recolección y organización dentro del sistema robótico.</p>
+    </div>
+</body>
+</html>

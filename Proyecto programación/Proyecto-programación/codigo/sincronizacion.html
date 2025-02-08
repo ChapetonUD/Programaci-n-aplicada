@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincronización</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #d4a5ff, #a56eff);
+            color: #333;
+        }
+        header {
+            background: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #6a0dad;
+            border-bottom: 2px solid #6a0dad;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>Sincronización</header>
+    
+    <div class="container">
+        <h2>Descripción</h2>
+        <p>La sincronización se logra utilizando <strong>CircuitPython</strong>, un lenguaje optimizado para microcontroladores, programado a través del entorno <strong>Thonny</strong>. A través de este sistema, la Raspberry Pi Pico W se conecta a la red Wi-Fi y recibe instrucciones para operar el brazo robótico.</p>
+    <p>Dependiendo del programa en ejecución, la Raspberry recibe datos, los procesa y los convierte en señales de control para los servomotores. Esto permite que el brazo reaccione dinámicamente a los comandos enviados.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Diagrama</h2>
+        <div class="image-container">
+            <img src="imagenes/sincronizacion.png" alt="Diagrama Brazo y Servos">
+        </div>
+    </div>
+    
+    <div class="container">
+
+        <h2>Funcionamiento</h2>
+<p> Ahora explicamos el funcionamiento de la sincronización
+         <h3>1. Configuración de la Conexión Wi-Fi</h3>
+    <ul>
+        <li>El código en CircuitPython establece la conexión de la <strong>Raspberry Pi Pico W</strong> con la red Wi-Fi.</li>
+        <li>Se define una IP para la comunicación y se configuran los protocolos de transferencia de datos.</li>
+    </ul>
+
+    <h3>2. Recepción de Instrucciones</h3>
+    <ul>
+        <li>El sistema recibe comandos desde una fuente externa (PC, gemelo virtual o control remoto).</li>
+        <li>Estos comandos contienen las instrucciones necesarias para mover el brazo.</li>
+    </ul>
+
+    <h3>3. Procesamiento y Envío de Datos</h3>
+    <ul>
+        <li>La Raspberry Pi Pico W analiza los datos y traduce los comandos en señales PWM para los servomotores.</li>
+        <li>Dependiendo del programa en ejecución, el brazo se mueve a la posición indicada.</li>
+    </ul>
+
+    <h3>4. Ejecución del Movimiento</h3>
+    <ul>
+        <li>Los servomotores reciben las señales y ajustan sus ángulos según las instrucciones.</li>
+        <li>El brazo robótico realiza el movimiento deseado con precisión y sincronización.</li>
+    </ul>
+
+    <p>Gracias a este sistema, el brazo puede ser controlado remotamente, integrándose con otros módulos como la cámara y el gemelo virtual, garantizando una comunicación fluida y eficiente.</p>
+    </div>
+</body>
+</html>

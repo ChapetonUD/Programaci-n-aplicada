@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recoger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7f50, #ff6f61);
+            color: #333;
+        }
+        header {
+            background: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #ff6347;
+            border-bottom: 2px solid #ff6347;
+            padding-bottom: 5px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>Recoger</header>
+    
+    <div class="container">
+        <h2>Descripción</h2>
+        <p>El electroimán se activa cuando el brazo robótico se posiciona en la ubicación del objeto detectado. Una vez que el objeto es atraído y asegurado, el brazo se mueve hacia la zona de destino. Al llegar, el electroimán se desactiva, liberando el objeto en la ubicación deseada.</p>
+    <p>Este proceso se controla a través de la <strong>Raspberry Pi Pico W</strong>, que gestiona la activación y desactivación del electroimán en sincronización con el movimiento del brazo.</p>
+    </div>
+    
+    <div class="container">
+        <h2>Diagrama</h2>
+        <div class="image-container">
+            <img src="imagenes/iman.png" alt="Diagrama Brazo y Servos">
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Funcionamiento</h2>
+         <h3>1. Detección del Objeto</h3>
+    <ul>
+        <li>La cámara del sistema identifica la presencia del objeto.</li>
+        <li>El brazo se mueve automáticamente hacia la posición del objeto detectado.</li>
+    </ul>
+
+    <h3>2. Activación del Electroimán</h3>
+    <ul>
+        <li>Cuando el brazo llega a la posición del objeto, el electroimán se activa.</li>
+        <li>El objeto metálico es atraído y asegurado por el imán.</li>
+    </ul>
+
+    <h3>3. Transporte del Objeto</h3>
+    <ul>
+        <li>El brazo robótico se mueve hacia la caja o el destino definido.</li>
+        <li>El sistema mantiene el electroimán activo para sujetar el objeto durante el traslado.</li>
+    </ul>
+
+    <h3>4. Liberación del Objeto</h3>
+    <ul>
+        <li>Al llegar a la posición final, el electroimán se desactiva.</li>
+        <li>El objeto se suelta en la ubicación indicada.</li>
+    </ul>
+
+    <p>Este mecanismo permite un manejo eficiente de objetos metálicos, optimizando la automatización del proceso de recolección y colocación dentro del sistema robótico.</p>
+    </div>
+</body>
+</html>

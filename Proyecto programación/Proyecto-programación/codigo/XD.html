@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de Servos</title>
+</head>
+<body>
+    <h1>Control de Servos</h1>
+    
+    <!-- Slider para el primer servomotor -->
+    <label for="slider1">Angulo del Servo 1:</label>
+    <input type="range" id="slider1" min="0" max="90" value="45" oninput="updateServo1(this.value)">
+    <p>Angulo seleccionado Servo 1: <span id="angleValue1">45</span> grados</p>
+
+    <!-- Slider para el segundo servomotor (base) -->
+    <label for="slider2">Angulo del Servo 2 (Base):</label>
+    <input type="range" id="slider2" min="0" max="180" value="90" oninput="updateServo2(this.value)">
+    <p>Angulo seleccionado Servo 2 (Base): <span id="angleValue2">90</span> grados</p>
+
+    <!-- Slider para el tercer servomotor (nuevo) -->
+    <label for="slider3">Angulo del Servo 3:</label>
+    <input type="range" id="slider3" min="0" max="180" value="90" oninput="updateServo3(this.value)">
+    <p>Angulo seleccionado Servo 3: <span id="angleValue3">90</span> grados</p>
+
+    <script>
+        // Función para enviar el ángulo del primer servo
+        function updateServo1(value) {
+            document.getElementById("angleValue1").innerText = value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/set_servo1?value=" + value, true);
+            xhr.send();
+        }
+
+        // Función para enviar el ángulo del segundo servo
+        function updateServo2(value) {
+            document.getElementById("angleValue2").innerText = value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/set_servo2?value=" + value, true);
+            xhr.send();
+        }
+
+        // Función para enviar el ángulo del tercer servo
+        function updateServo3(value) {
+            document.getElementById("angleValue3").innerText = value;
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/set_servo3?value=" + value, true);
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
